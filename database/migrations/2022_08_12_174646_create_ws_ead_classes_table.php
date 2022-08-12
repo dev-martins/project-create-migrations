@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('ws_ead_classes', function (Blueprint $table) {
-            $table->integer('class_id')->unsigned()->primary()->autoIncrement();
+            $table->integer('class_id')->unsigned()->autoIncrement();
             $table->string('class_title', 100)->nullable()->default(null);
             $table->string('class_thumb', 150)->nullable()->default(null);
             $table->string('class_name')->nullable()->default(null);
