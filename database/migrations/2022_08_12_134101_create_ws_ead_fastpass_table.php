@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('aws_videos', function (Blueprint $table) {
-            $table->integer('id')->autoIncrement();
-            $table->string('url');
-            $table->string('url_signed');
-            $table->string('thumbnail_url')->nullable()->default(null);
-            $table->float('duration_in_seconds')->nullable()->default(0);
+        Schema::create('ws_ead_fastpass', function (Blueprint $table) {
+            $table->integer('fastpass_id')->autoIncrement();
+            $table->integer('user_id');
+            $table->integer('course_id');
+            $table->integer('module_id');
+            $table->timestamp('fastpass_data');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('aws_videos');
+        Schema::dropIfExists('ws_ead_fastpass');
     }
 };

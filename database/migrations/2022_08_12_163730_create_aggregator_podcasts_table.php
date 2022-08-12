@@ -13,12 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('aws_videos', function (Blueprint $table) {
-            $table->integer('id')->autoIncrement();
-            $table->string('url');
-            $table->string('url_signed');
-            $table->string('thumbnail_url')->nullable()->default(null);
-            $table->float('duration_in_seconds')->nullable()->default(0);
+        Schema::create('aggregator_podcasts', function (Blueprint $table) { //podcasts_agregadores 
+            $table->id()->autoIncrement();
+            $table->string('name')->nullable()->default(null);
+            $table->tinyInteger('status')->nullable()->default(null);
+            $table->string('aggregator_img')->nullable()->default(null);
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('aws_videos');
+        Schema::dropIfExists('aggregator_podcasts');
     }
 };

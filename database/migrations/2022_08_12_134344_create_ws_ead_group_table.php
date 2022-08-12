@@ -13,12 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('aws_videos', function (Blueprint $table) {
-            $table->integer('id')->autoIncrement();
-            $table->string('url');
-            $table->string('url_signed');
-            $table->string('thumbnail_url')->nullable()->default(null);
-            $table->float('duration_in_seconds')->nullable()->default(0);
+        Schema::create('ws_ead_group', function (Blueprint $table) {
+            $table->integer('group_id')->unsigned()->autoIncrement();
+            $table->string('group_title');
+            $table->timestamp('group_init');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('aws_videos');
+        Schema::dropIfExists('ws_ead_group');
     }
 };

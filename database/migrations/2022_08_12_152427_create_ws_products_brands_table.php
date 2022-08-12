@@ -13,12 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('aws_videos', function (Blueprint $table) {
-            $table->integer('id')->autoIncrement();
-            $table->string('url');
-            $table->string('url_signed');
-            $table->string('thumbnail_url')->nullable()->default(null);
-            $table->float('duration_in_seconds')->nullable()->default(0);
+        Schema::create('ws_products_brands', function (Blueprint $table) {
+            $table->integer('brand_id')->unsigned()->autoIncrement();
+            $table->string('brand_name')->nullable()->default(null);
+            $table->string('brand_title')->nullable()->default(null);
+            $table->timestamp('brand_created')->nullable()->default(null);
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('aws_videos');
+        Schema::dropIfExists('ws_products_brands');
     }
 };

@@ -13,12 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('aws_videos', function (Blueprint $table) {
-            $table->integer('id')->autoIncrement();
-            $table->string('url');
-            $table->string('url_signed');
-            $table->string('thumbnail_url')->nullable()->default(null);
-            $table->float('duration_in_seconds')->nullable()->default(0);
+        Schema::create('ws_gallery', function (Blueprint $table) {
+            $table->integer('gallery_image_id')->autoIncrement();
+            $table->integer('gallery_id');
+            $table->string('gallery_image')->nullable()->default(null);
+            $table->integer('gallery_image2x')->nullable()->default(null);
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('aws_videos');
+        Schema::dropIfExists('ws_gallery');
     }
 };

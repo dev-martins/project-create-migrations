@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('aws_videos', function (Blueprint $table) {
-            $table->integer('id')->autoIncrement();
-            $table->string('url');
-            $table->string('url_signed');
-            $table->string('thumbnail_url')->nullable()->default(null);
-            $table->float('duration_in_seconds')->nullable()->default(0);
+        Schema::create('ws_countries', function (Blueprint $table) {
+            $table->id()->autoIncrement();
+            $table->string('name', 100)->nullable()->default(null);
+            $table->string('dialCode', 10)->nullable()->default(null);
+            $table->string('isoCode', 10)->nullable()->default(null);
+            $table->string('flag')->nullable()->default(null);
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('aws_videos');
+        Schema::dropIfExists('ws_countries');
     }
 };
