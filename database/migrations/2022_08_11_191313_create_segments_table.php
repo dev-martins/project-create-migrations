@@ -14,17 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('segments', function (Blueprint $table) {
-            $table->id()->autoIncrement();
-            $table->string('image');
-            $table->tinyText('title');
-            $table->tinyText('description_short');
-            $table->text('description_long');
-            $table->tinyInteger('enabled')->default(1);
-            $table->tinyInteger('default');
-            $table->string('host');
-            $table->string('guest');
-            $table->string('url');
-            $table->softDeletes();
+            $table->integer('segment_id')->unsigned()->autoIncrement();
+            $table->string('segment_title')->nullable()->default(null);
+            $table->string('segment_name')->nullable()->default(null);
+            $table->string('segment_color', 10)->nullable()->default('#AE9A93');
+            $table->timestamp('segment_created')->nullable()->default(null);
             $table->timestamps();
         });
     }
