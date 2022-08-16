@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ws_ead_signatures', function (Blueprint $table) {
-            $table->id()->autoIncrement();
-            $table->string('name', 45)->nullable()->default(null);
-            $table->integer('type')->nullable()->default(null);
+        Schema::create('ws_posts_images', function (Blueprint $table) {
+            $table->id()->unsigned()->autoIncrement();
+            $table->integer('post_id')->unsigned()->nullable()->default(null);
+            $table->string('image')->nullable()->default(null);
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ws_ead_signatures');
+        Schema::dropIfExists('ws_posts_images');
     }
 };

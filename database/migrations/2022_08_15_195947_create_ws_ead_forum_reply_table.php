@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('ws_ead_forum_reply', function (Blueprint $table) {
             $table->integer('response_id')->unsigned()->autoIncrement();
-            $table->integer('user_id')->unsigned()->nullable()->default(null)->index('wc_ead_forum_user');
-            $table->integer('enrollment_id')->unsigned()->nullable()->default(null)->index('wc_ead_forum_enrollment');
-            $table->integer('forum_id')->unsigned()->nullable()->default(null)->index('wc_ead_forum_forum');
+            $table->integer('user_id')->unsigned()->nullable()->default(null)->index('wc_ead_forum_reply_user');
+            $table->integer('enrollment_id')->unsigned()->nullable()->default(null)->index('wc_ead_forum_reply_enrollment');
+            $table->integer('forum_id')->unsigned()->nullable()->default(null)->index('wc_ead_forum_reply_forum');
             $table->text('response_content')->nullable()->default(null);
             $table->timestamp('response_open')->nullable()->default(null);
             $table->timestamps();

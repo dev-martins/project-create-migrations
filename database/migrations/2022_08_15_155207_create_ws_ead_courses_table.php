@@ -20,8 +20,7 @@ return new class extends Migration
             $table->foreign('course_author')->references('pro_id')->on('ws_ead_professionals')->onDelete('cascade')->onUpdate('cascade');
             $table->integer('course_segment')->unsigned()->nullable()->default(null);
             $table->foreign('course_segment')->references('segment_id')->on('segments')->onDelete('cascade')->onUpdate('cascade');
-            $table->integer('signature_id')->nullable()->default(1);
-            $table->foreign('signature_id')->references('id')->on('ws_ead_signatures')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('signature_id')->references('id')->on('ws_ead_signatures')->onDelete('cascade')->onUpdate('cascade');
             $table->text('course_desc')->nullable()->default(null);
             $table->string('course_cover')->nullable()->default(null);
             $table->string('course_image_details')->nullable()->default(null);
