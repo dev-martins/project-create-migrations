@@ -14,12 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('support_materials', function (Blueprint $table) {
-            $table->integer('material_id')->autoIncrement();
+            $table->integer('material_id')->unsigned()->autoIncrement();
             $table->string('material_title', 100)->nullable()->default(null);
             $table->string('material_thumb', 150)->nullable()->default(null);
             $table->string('url', 150)->nullable()->default(null);
             $table->text('url_signed')->nullable()->default(null);
-            $table->integer('material_type')->nullable()->default(null);
+            $table->integer('material_type')->unsigned()->nullable()->default(null);
             $table->timestamps();
         });
     }

@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('aws_videos', function (Blueprint $table) {
-            $table->integer('id')->autoIncrement();
+            $table->id()->autoIncrement();
             $table->string('url');
             $table->string('url_signed');
             $table->string('thumbnail_url')->nullable()->default(null);

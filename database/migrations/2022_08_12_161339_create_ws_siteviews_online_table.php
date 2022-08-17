@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('ws_siteviews_online', function (Blueprint $table) {
-            $table->integer('online_id')->autoIncrement();
-            $table->integer('online_user')->nullable()->default(null);
+            $table->integer('online_id')->unsigned()->autoIncrement();
+            $table->integer('online_user')->unsigned()->nullable()->default(null);
             $table->string('online_name')->nullable()->default(null);
             $table->timestamp('online_startview')->nullable()->default(null);
             $table->timestamp('online_endview')->nullable()->default(null);

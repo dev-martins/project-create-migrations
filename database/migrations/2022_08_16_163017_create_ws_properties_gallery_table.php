@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('ws_properties_gallery', function (Blueprint $table) {
             $table->integer('realty_id')->unsigned()->autoIncrement();
-            $table->integer('id')->unsigned()->nullable()->default(null)->index('idx_1');
+            $table->integer('id')->unsigned()->nullable()->default(null)->index('ws_properties_gallery_id');
             $table->string('image')->nullable()->default(null);
             $table->timestamps();
         });

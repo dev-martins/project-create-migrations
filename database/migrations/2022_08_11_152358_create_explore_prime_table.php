@@ -20,8 +20,8 @@ return new class extends Migration
             $table->string('button_label', 45);
             $table->string('thumbnail');
             $table->string('href', 45);
-            $table->integer('enabled');
-            $table->integer('order');
+            $table->integer('enabled')->unsigned();
+            $table->integer('order')->unsigned();
             $table->timestamps();
         });
     }

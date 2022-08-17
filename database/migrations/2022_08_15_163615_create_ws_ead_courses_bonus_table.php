@@ -17,8 +17,8 @@ return new class extends Migration
             $table->integer('bonus_id')->unsigned()->autoIncrement();
             $table->integer('course_id')->unsigned()->nullable()->default(null)->index('wc_ead_course_bonus');
             $table->integer('bonus_course_id')->unsigned()->nullable()->default(null)->index('wc_ead_bonus_id');
-            $table->integer('bonus_ever')->nullable()->default(null);
-            $table->integer('bonus_wait')->nullable()->default(null);
+            $table->integer('bonus_ever')->unsigned()->nullable()->default(null);
+            $table->integer('bonus_wait')->unsigned()->nullable()->default(null);
             $table->date('bonus_ever_date')->nullable()->default(null);
             $table->timestamps();
         });

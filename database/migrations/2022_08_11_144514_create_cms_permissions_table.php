@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('cms_permissions', function (Blueprint $table) {
-            $table->integer('permission_id', 11)->autoIncrement();
+            $table->integer('permission_id')->autoIncrement();
             $table->string('name', 100);
             $table->timestamps();
         });

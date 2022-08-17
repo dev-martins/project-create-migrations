@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('api_key', 255)->nullable()->default(null);
             $table->string('api_token', 255)->nullable()->default(null);
             $table->timestamp('api_date')->nullable();
-            $table->integer('api_status')->nullable()->default(null);
-            $table->integer('api_loads')->nullable()->default(null);
+            $table->integer('api_status')->unsigned()->nullable()->default(null);
+            $table->integer('api_loads')->unsigned()->nullable()->default(null);
             $table->timestamp('api_lastload')->nullable();
             $table->timestamps();
         });

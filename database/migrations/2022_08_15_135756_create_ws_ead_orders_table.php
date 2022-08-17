@@ -17,7 +17,7 @@ return new class extends Migration
             $table->integer('order_id')->unsigned()->autoIncrement();
             $table->integer('user_id')->unsigned()->nullable()->default(null)->index('wc_ead_order_user');
             $table->integer('course_id')->unsigned()->nullable()->default(null)->index('wc_ead_order_course');
-            $table->integer('order_product_id')->nullable()->default(null);
+            $table->integer('order_product_id')->unsigned()->nullable()->default(null);
             $table->string('order_transaction')->nullable()->default(null);
             $table->integer('order_callback_type')->nullable()->default(null);
             $table->string('order_off')->nullable()->default(null);

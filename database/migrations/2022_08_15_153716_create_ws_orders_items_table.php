@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('ws_orders_items', function (Blueprint $table) {
             $table->integer('item_id')->unsigned()->autoIncrement();
             $table->integer('order_id')->unsigned()->nullable()->default(null);
-            $table->integer('pdt_id')->nullable()->default(null);
-            $table->integer('stock_id')->nullable()->default(null);
+            $table->integer('pdt_id')->unsigned()->nullable()->default(null);
+            $table->integer('stock_id')->unsigned()->nullable()->default(null);
             $table->string('item_name')->nullable()->default(null);
             $table->decimal('item_price')->nullable()->default(null);
             $table->decimal('item_amount')->nullable()->default(1);

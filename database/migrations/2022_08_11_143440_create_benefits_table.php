@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('benefits', function (Blueprint $table) {
-            $table->integer('benefits_id', 11)->autoIncrement();
+            $table->integer('benefits_id')->autoIncrement();
             $table->string('main_title', 100)->nullable()->default(null);
             $table->text('description')->nullable()->default(null);
             $table->text('image')->nullable()->default(null);

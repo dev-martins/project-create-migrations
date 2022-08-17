@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('ws_slides', function (Blueprint $table) {
             $table->integer('slide_id')->unsigned()->autoIncrement();
-            $table->integer('slide_status')->nullable()->default(null);
+            $table->integer('slide_status')->unsigned()->nullable()->default(null);
             $table->string('slide_image')->nullable()->default(null);
             $table->string('slide_title')->nullable()->default(null);
             $table->text('slide_desc')->nullable()->default(null);

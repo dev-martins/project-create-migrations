@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('ws_ead_fastpass', function (Blueprint $table) {
             $table->integer('fastpass_id')->autoIncrement();
-            $table->integer('user_id');
-            $table->integer('course_id');
-            $table->integer('module_id');
+            $table->integer('user_id')->unsigned();
+            $table->integer('course_id')->unsigned();
+            $table->integer('module_id')->unsigned();
             $table->timestamp('fastpass_data');
             $table->timestamps();
         });

@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('redirection_name');
             $table->string('redirection_url');
             $table->string('redirection_destination');
-            $table->integer('redirection_status');
-            $table->integer('redirection_by');
+            $table->integer('redirection_status')->unsigned();
+            $table->integer('redirection_by')->unsigned();
             $table->timestamp('redirection_created');
             $table->timestamps();
         });

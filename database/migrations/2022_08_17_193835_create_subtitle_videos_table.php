@@ -13,11 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('common_questions', function (Blueprint $table) {
-            $table->id()->autoIncrement();
-            $table->string('topic', 100);
-            $table->integer('order')->unsigned()->nullable()->default(1);
-            $table->tinyInteger('enabled')->nullable()->default(1);
+        Schema::create('subtitle_videos', function (Blueprint $table) {
+            $table->id()->unsigned()->autoIncrement();
+            $table->foreignId('video_id')->references('id')->on('aws_videos')->onDelete('cascade')->onUpdate('cascade');
+            $table->string('url');
+            $table->text('url_signed');
+            $table->char('status', 1);
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('common_questions');
+        Schema::dropIfExists('subtitle_videos');
     }
 };

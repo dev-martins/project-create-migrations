@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('ws_events', function (Blueprint $table) {
             $table->integer('event_id')->autoIncrement();
-            $table->integer('event_by');
+            $table->integer('event_by')->unsigned();
             $table->string('event_title')->nullable()->default(null);
             $table->string('event_name')->nullable()->default(null);
             $table->string('event_cover')->nullable()->default(null);

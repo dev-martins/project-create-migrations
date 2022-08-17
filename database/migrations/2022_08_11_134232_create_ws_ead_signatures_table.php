@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('ws_ead_signatures', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->string('name', 45)->nullable()->default(null);
-            $table->integer('type')->nullable()->default(null);
+            $table->integer('type')->unsigned()->nullable()->default(null);
             $table->timestamps();
         });
     }

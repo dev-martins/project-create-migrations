@@ -22,7 +22,7 @@ return new class extends Migration
             $table->timestamp('page_date')->nullable()->default(null);
             $table->timestamp('page_revision')->nullable()->default(null);
             $table->integer('page_order')->nullable()->default(null);
-            $table->integer('page_status')->nullable()->default(null);
+            $table->integer('page_status')->unsigned()->nullable()->default(null);
             $table->string('page_cover')->nullable()->default(null);
             $table->timestamps();
         });
