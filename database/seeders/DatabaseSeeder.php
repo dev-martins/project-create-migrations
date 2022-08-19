@@ -124,7 +124,7 @@ class DatabaseSeeder extends Seeder
             // HealthRecord::class,
             // ExplorePrime::class,
             ContactUs::class,
-            // CommonQuestion::class,
+            CommonQuestion::class,
             // Blog::class,
             Benefit::class,
             // Banner::class,

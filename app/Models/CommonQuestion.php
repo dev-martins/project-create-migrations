@@ -13,7 +13,7 @@ class CommonQuestion extends Model
     
     protected $fillable = [
         'topic',
-        'question',
-        'answer'
+        'order',
+        'enabled',
     ];
 }

@@ -17,7 +17,9 @@ class CommonQuestionFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'topic' => $this->faker->name,
+            'order' => $this->faker->numberBetween(1, 10),
+            'enabled' => $this->faker->boolean,
         ];
     }
 }

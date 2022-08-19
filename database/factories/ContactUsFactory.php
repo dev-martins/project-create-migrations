@@ -19,7 +19,7 @@ class ContactUsFactory extends Factory
         return [
             'name' => $this->faker->name,
             'email' => $this->faker->email,
-            'subject' => $this->faker->sentence,
+            'subject' => $this->faker->name,
             'description' => $this->faker->paragraph,
         ];
     }
