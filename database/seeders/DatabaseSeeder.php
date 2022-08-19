@@ -8,6 +8,7 @@ use App\Models\{
     AnnotationVideo,
     AwsVideo,
     Banner,
+    BannerType,
     Benefit,
     Blog,
     CommonQuestion,
@@ -127,13 +128,14 @@ class DatabaseSeeder extends Seeder
             CommonQuestion::class,
             // Blog::class,
             Benefit::class,
+            BannerType::class,
             // Banner::class,
             AwsVideo::class,
             // AnnotationVideo::class,
         ];
 
         foreach ($array as $class) {
-            $class::factory(15)->create();
+            $class::factory(2)->create();
         }
     }
 }

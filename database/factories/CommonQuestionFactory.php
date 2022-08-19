@@ -18,7 +18,7 @@ class CommonQuestionFactory extends Factory
     {
         return [
             'topic' => $this->faker->name,
-            'order' => $this->faker->numberBetween(1, 10),
+            'order' => $this->faker->numberBetween(1, 100),
             'enabled' => $this->faker->boolean,
         ];
     }
