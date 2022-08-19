@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\PodcastsAggregators>
  */
-class WsEadCoursesFactory extends Factory
+class PodcastsAggregatorsFactory extends Factory
 {
     /**
      * Define the model's default state.

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\AnnotationVideo>
  */
-class annotationVideoFactory extends Factory
+class AnnotationVideoFactory extends Factory
 {
     /**
      * Define the model's default state.
