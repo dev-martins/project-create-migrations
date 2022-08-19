@@ -17,7 +17,9 @@ class BenefitFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'main_title' => $this->faker->sentence,
+            'description' => $this->faker->paragraph,
+            'image' => $this->faker->imageUrl()
         ];
     }
 }

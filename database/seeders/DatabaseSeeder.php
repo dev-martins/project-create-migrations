@@ -126,7 +126,7 @@ class DatabaseSeeder extends Seeder
             // ContactUs::class,
             // CommonQuestion::class,
             // Blog::class,
-            // Benefit::class,
+            Benefit::class,
             // Banner::class,
             AwsVideo::class,
             // AnnotationVideo::class,
