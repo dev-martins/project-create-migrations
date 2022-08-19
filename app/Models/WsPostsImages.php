@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class WsPostsImages extends Model
 {
     use HasFactory;
+
+    protected $table = 'ws_posts_images';
+
+    protected $fillable = [
+        'post_id',
+        'image'
+    ];
 }

@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class VideoNote extends Model
 {
     use HasFactory;
+
+    // protected $table = 'video_notes';
+
+    protected $fillable = [
+        'subtitle',
+        'video',
+    ];
 }

@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class WsEadStudentClasse extends Model
 {
     use HasFactory;
+
+    protected $table = 'ws_ead_student_classes';
 }

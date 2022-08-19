@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Legend extends Model
 {
     use HasFactory;
+
+    protected $table = 'legends';
+
+    protected $fillable = [
+        'start_time',
+        'end_time',
+        'video_id',
+        'legend'
+    ];
+
 }

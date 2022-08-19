@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class ExplorePrime extends Model
 {
     use HasFactory;
+
+    protected $table = 'explore_prime';
+
+    protected $fillable = [
+        'title',
+        'description',
+        'button_label',
+        'thumbnail',
+        'order',
+        'href'
+    ];
 }

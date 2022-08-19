@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class CommonQuestion extends Model
 {
     use HasFactory;
+
+    protected $table = 'common_questions';
+    
+    protected $fillable = [
+        'topic',
+        'question',
+        'answer'
+    ];
 }

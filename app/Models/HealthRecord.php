@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class HealthRecord extends Model
 {
     use HasFactory;
+
+    protected $table = 'health_records';
+
+    protected $fillable = [
+        'user_id',
+        'ficha_json'
+    ];
 }

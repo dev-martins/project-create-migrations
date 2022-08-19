@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class WsCountry extends Model
 {
     use HasFactory;
+
+    protected $table = 'ws_countries';
+
+    protected $fillable = [
+        'name',
+        'dialCode',
+        'isoCode',
+        'flag'
+    ];
 }
