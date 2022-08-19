@@ -123,7 +123,7 @@ class DatabaseSeeder extends Seeder
             // Legend::class,
             // HealthRecord::class,
             // ExplorePrime::class,
-            // ContactUs::class,
+            ContactUs::class,
             // CommonQuestion::class,
             // Blog::class,
             Benefit::class,
