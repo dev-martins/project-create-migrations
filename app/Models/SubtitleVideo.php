@@ -11,11 +11,13 @@ class SubtitleVideo extends Model
 
     protected $table = 'subtitle_videos';
 
+    protected $primaryKey = 'id';
+
     protected $fillable = [
         "video_id",
         "extension",
         "url",
         "status",
-        "url_signed"
+        "url_signed",
     ];
 }

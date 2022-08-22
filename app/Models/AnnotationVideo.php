@@ -11,11 +11,13 @@ class AnnotationVideo extends Model
 
     protected $table = 'annotation_videos';
 
+    protected $primaryKey = 'id';
+
     protected $fillable = [
         'user_id',
         'course_id',
         'class_id',
         'annotation',
-        'time_video'
+        'time_video',
     ];
 }

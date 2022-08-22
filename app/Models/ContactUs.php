@@ -11,10 +11,12 @@ class ContactUs extends Model
 
     protected $table = 'contact_us';
 
+    protected $primaryKey = 'id';
+
     protected $fillable = [
         'name',
         'email',
         'subject',
-        'description'
+        'description',
     ];
 }

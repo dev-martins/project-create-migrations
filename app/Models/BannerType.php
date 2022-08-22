@@ -11,6 +11,8 @@ class BannerType extends Model
 
     protected $table = 'banners_type';
 
+    protected $primaryKey = 'id';
+
     protected $fillable = [
         'name',
     ];

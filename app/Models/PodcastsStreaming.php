@@ -11,6 +11,8 @@ class PodcastsStreaming extends Model
 
     protected $table = 'podcasts_streamings';
 
+    protected $primaryKey = 'id';
+
     protected $fillable = [
         'name',
         'image',

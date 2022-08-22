@@ -11,8 +11,10 @@ class Policy extends Model
 
     protected $table = 'policies';
 
+    protected $primaryKey = 'policie_id';
+
     protected $fillable = [
         'name',
-        'type_id'
+        'type_id',
     ];
 }

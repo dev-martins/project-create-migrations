@@ -11,11 +11,13 @@ class OtherVideoFormats extends Model
 
     protected $table = 'other_video_formats';
 
+    protected $primaryKey = 'id';
+
     protected $fillable = [
         'video_id',
         'format',
         'thumbnail_url',
         'url',
-        'url_signed'
+        'url_signed',
     ];
 }

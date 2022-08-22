@@ -11,11 +11,12 @@ class SupportMaterialCourseClasse extends Model
 
     protected $table = 'support_material_course_classe';
     
+    protected $primaryKey = 'id';
+    
     protected $fillable = [
-        'id,
-        material_id,
-        course_id,
-        classe_id,
-        order'
+        "material_id",
+        "course_id",
+        "classe_id",
+        "order",
     ];
 }

@@ -11,6 +11,8 @@ class Segment extends Model
     
     protected $table = 'segments';
 
+    protected $primaryKey = 'segment_id';
+
     protected $fillable = [
         'segment_title',
         'segment_name',

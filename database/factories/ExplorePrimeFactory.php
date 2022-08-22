@@ -17,7 +17,13 @@ class ExplorePrimeFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => $this->faker->name,
+            'description' => $this->faker->paragraph,
+            'button_label' => $this->faker->word,
+            'thumbnail' => $this->faker->imageUrl(),
+            'order' => $this->faker->numberBetween(1, 15),
+            'enabled' => $this->faker->boolean,
+            'href' => 'http://www.google.com',
         ];
     }
 }

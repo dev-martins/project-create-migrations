@@ -11,8 +11,9 @@ class ProfessionalComment extends Model
 
     protected $table = 'professional_comments';
 
+    protected $primaryKey = 'comment_id';
+
     protected $fillable = [
-        'comment_id',
         'pro_id',
         'class_id',
         'video_time_seconds',

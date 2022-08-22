@@ -11,8 +11,9 @@ class WsUsersAddress extends Model
 
     protected $table = 'ws_users_address';
 
+    protected $primaryKey = 'user_id';
+
     protected $fillable = [
-        'user_id',
         'addr_id',
         'addr_key',
         'addr_name',

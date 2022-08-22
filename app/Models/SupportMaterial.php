@@ -10,12 +10,14 @@ class SupportMaterial extends Model
     use HasFactory;
 
     protected $table = 'support_materials';
+
+    protected $primaryKey = 'material_id';
     
     protected $fillable = [
-        'material_id,
-        material_type,
-        material_title,
-        material_thumb,
-        url_signed'
+        "material_id",
+        "material_type",
+        "material_title",
+        "material_thumb",
+        "url_signed",
     ];
 }

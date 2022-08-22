@@ -11,12 +11,15 @@ class ExplorePrime extends Model
 
     protected $table = 'explore_prime';
 
+    protected $primaryKey = 'id';
+
     protected $fillable = [
         'title',
         'description',
         'button_label',
         'thumbnail',
         'order',
-        'href'
+        'enabled',
+        'href',
     ];
 }

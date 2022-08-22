@@ -11,8 +11,10 @@ class HealthRecord extends Model
 
     protected $table = 'health_records';
 
+    protected $primaryKey = 'id';
+
     protected $fillable = [
         'user_id',
-        'ficha_json'
+        'ficha_json',
     ];
 }

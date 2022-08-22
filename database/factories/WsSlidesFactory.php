@@ -17,7 +17,14 @@ class WsSlidesFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'slide_status' => $this->faker->boolean(),
+        'slide_image' => $this->faker->imageUrl(),
+        'slide_title' => $this->faker->sentence(),
+        'slide_desc' => $this->faker->paragraph(),
+        'slide_link' => $this->faker->imageUrl(),
+        'slide_date' => $this->faker->date(),
+        'slide_start' => $this->faker->date(),
+        'slide_end' => $this->faker->date()  
         ];
     }
 }

@@ -11,10 +11,11 @@ class LikedCourses extends Model
 
     protected $table = 'liked_courses';
 
+    protected $primaryKey = 'idliked_video';
+
     protected $fillable = [
-        'idliked_video',
         'course_id',
+        'user_id',
         'status',
-        'user_id'
     ];
 }

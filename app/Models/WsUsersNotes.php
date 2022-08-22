@@ -11,13 +11,14 @@ class WsUsersNotes extends Model
 
     protected $table = 'ws_users_notes';
 
+    protected $primaryKey = 'note_id';
+
     protected $fillable = [
-        'note_id',
         'user_id',
         'admin_id',
         'note_text',
         'note_datetime',
-        'note_status'   
+        'note_status',  
                
     ];
 }

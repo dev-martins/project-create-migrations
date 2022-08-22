@@ -11,6 +11,8 @@ class WsSiteViewsOnline extends Model
 
     protected $table = 'ws_siteviews_online';
 
+    protected $primaryKey = 'online_id';
+
     protected $fillable = [
         'online_id',
         'online_user',

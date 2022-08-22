@@ -11,12 +11,14 @@ class Podcast extends Model
 
     protected $table = 'podcasts';
 
+    protected $primaryKey = 'id';
+
     protected $fillable = [
         'title',
         'image',
         'description_long',
         'description_short',
-        'enabled'
+        'enabled',
     ];
 
 }

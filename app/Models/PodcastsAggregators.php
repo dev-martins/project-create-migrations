@@ -11,9 +11,11 @@ class PodcastsAggregators extends Model
 
     protected $table = 'aggregators_podcasts';
 
+    protected $primaryKey = 'id';
+
     protected $fillable = [
         'name',
         'status',
-        'aggregator_img'
+        'aggregator_img',
     ];
 }

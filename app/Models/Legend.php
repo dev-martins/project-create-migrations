@@ -11,11 +11,13 @@ class Legend extends Model
 
     protected $table = 'legends';
 
+    protected $primaryKey = 'legend_id';
+
     protected $fillable = [
         'start_time',
         'end_time',
         'video_id',
-        'legend'
+        'legend',
     ];
 
 }

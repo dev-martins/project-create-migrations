@@ -11,9 +11,11 @@ class PolicyTopic extends Model
 
     protected $table = 'policy_topics';
 
+    protected $primaryKey = 'topic_id';
+
     protected $fillable = [
         'text',
         'policie_id',
-        'order'
+        'order',
     ];
 }

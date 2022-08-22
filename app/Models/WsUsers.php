@@ -11,9 +11,9 @@ class WsUsers extends Model
 
     protected $table = 'ws_users';
 
+    protected $primaryKey = 'user_id';
+
     protected $fillable = [
-        'agregador_id',
-        'user_id',
         'user_thumb',
         'user_name',
         'user_lastname',

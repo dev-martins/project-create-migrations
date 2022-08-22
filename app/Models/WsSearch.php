@@ -11,8 +11,9 @@ class WsSearch extends Model
 
     protected $table = 'ws_search';
 
+    protected $primaryKey = 'search_id';
+
     protected $fillable = [
-        'search_id',
         'search_key',
         'search_count',
         'search_date',
