@@ -9,7 +9,7 @@ class PodcastsAggregators extends Model
 {
     use HasFactory;
 
-    protected $table = 'aggregators_podcasts';
+    protected $table = 'podcasts_aggregators';
 
     protected $primaryKey = 'id';
 

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('image')->nullable()->default(null);
             $table->string('url')->nullable()->default(null);
             $table->foreignId('podcast_id')->unsigned()->references('id')->on('podcasts')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreignId('agregador_id')->unsigned()->references('id')->on('aggregator_podcasts')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('agregador_id')->unsigned()->references('id')->on('podcasts_aggregators')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

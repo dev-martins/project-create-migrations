@@ -13,22 +13,19 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ws_users', function (Blueprint $table) {
-            $table->integer('user_id')->unsigned()->autoIncrement();
+        Schema::create('bkp_ws_users', function (Blueprint $table) {
+            $table->integer('user_id')->autoIncrement();
+            $table->string('user_thumb')->nullable()->default(null);
             $table->string('user_name')->nullable()->default(null);
             $table->string('user_lastname')->nullable()->default(null);
-            $table->string('user_email');
-            $table->string('user_password');
-            $table->foreignId('aggregator_id')->unsigned()->nullable()->default(100)->references('id')->on('podcasts_aggregators')->onDelete('cascade')->onUpdate('cascade');
-            $table->string('user_thumb')->nullable()->default(null);
-            $table->string('user_photo')->nullable()->default(null);
             $table->string('user_document')->nullable()->default(null);
+            $table->integer('user_document_check')->nullable()->default(null);
             $table->char('user_genre', 1)->nullable()->default(null);
             $table->date('user_datebirth')->nullable()->default(null);
             $table->string('user_telephone')->nullable()->default(null);
-            $table->char('user_phone_ddi', 11)->nullable()->default(+55);
-            $table->integer('user_document_check')->nullable()->default(null);
             $table->string('user_cell')->nullable()->default(null);
+            $table->string('user_email')->nullable()->default(null);
+            $table->string('user_password')->nullable()->default(null);
             $table->string('user_channel')->nullable()->default(null);
             $table->timestamp('user_registration')->nullable()->default(null);
             $table->timestamp('user_lastupdate')->nullable()->default(null);
@@ -42,10 +39,8 @@ return new class extends Migration
             $table->string('user_google')->nullable()->default(null);
             $table->string('user_document_name')->nullable()->default(null);
             $table->string('user_blocking_reason')->nullable()->default(null);
-            $table->integer('user_agreement')->nullable()->default(0);
+            $table->char('user_agreement', 1)->nullable()->default(0);
             $table->integer('user_videointro')->nullable()->default(0);
-            $table->timestamp('email_verified_at')->nullable()->default(null);
-            $table->string('remember_token')->nullable()->default(null);
             $table->timestamps();
         });
     }
@@ -57,6 +52,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ws_users');
+        Schema::dropIfExists('bkp_ws_users');
     }
 };

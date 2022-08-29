@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('aggregator_podcasts', function (Blueprint $table) { //podcasts_agregadores 
+        Schema::create('podcasts_aggregators', function (Blueprint $table) { //podcasts_agregadores 
             $table->id()->autoIncrement();
             $table->string('name')->nullable()->default(null);
             $table->tinyInteger('status')->nullable()->default(null);
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('aggregator_podcasts');
+        Schema::dropIfExists('podcasts_aggregators');
     }
 };
